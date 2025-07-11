@@ -40,10 +40,10 @@ public class Weapon : MonoBehaviour
 		}
 		if (Rigidbody != null)
 		{
+			Rigidbody.isKinematic = false;
 			Rigidbody.linearVelocity = velocity;
 			Random.InitState(GetInstanceID());
 			Rigidbody.angularVelocity = 15.0f * Mathf.Deg2Rad * Random.insideUnitSphere;
-			Rigidbody.isKinematic = false;
 		}
 		if (trail != null)
 		{
